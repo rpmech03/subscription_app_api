@@ -17,7 +17,7 @@ class BlogView(viewsets.ModelViewSet, mixins.BlogMixin):
             'status' : True,
             'message' : 'blogs fetched',
             'data': {
-            'count' : self.queryset.count(), #by this can access queryset
+            'count' :  self.queryset.count(), #by this can access queryset
             # 'blogs' : self.serializer_class(self.queryset, many = True).data #can access serializer_class
             'blogs' : BlogSerializer(self.queryset, many = True).data
             }
