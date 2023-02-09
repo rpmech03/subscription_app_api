@@ -1,4 +1,6 @@
 from django.contrib import admin
-from .models import *
+from . import models
 
-admin.site.register(Blog)
+admin.site.register(models.Blog)
+admin.site.register(models.Subscription)
+admin.site.register(models.SubscriptionOrder)
